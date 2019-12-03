@@ -33,7 +33,7 @@
   </div>
 </template>
 <script>
-import { login } from '@/api/index.js'
+import { login } from '@/api/user.js'
 export default {
   data () {
     return {
