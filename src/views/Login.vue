@@ -59,7 +59,11 @@ export default {
         if (valid) {
           login(this.LoginForm).then(result => {
             if (result.meta.status === 200) {
+              // 设置token
+              // console.log(result)
+              localStorage.setItem('mydemo_token', result.data.token)
               this.$message(result.meta.msg)
+
               this.$router.push({ name: 'Home' })
             } else {
               this.$message.error(result.meta.msg)
